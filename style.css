@@ -20,6 +20,9 @@ body {
 }
 
 .screen {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     height: 75px;
     width: 275px;
     background-color: rgb(7, 7, 53);
