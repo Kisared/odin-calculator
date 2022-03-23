@@ -1,5 +1,6 @@
 const numbers = document.querySelectorAll('.number-button');
 const screen = document.querySelector('.screen');
+const operators = document.querySelectorAll('.operator-button');
 let displayValue;
 
 function add(firstNumber, secondNumber) {
