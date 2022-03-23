@@ -13,6 +13,7 @@ body {
 }
 
 .screen-section {
+    display: flex;
     height: 100px;
 }
 
