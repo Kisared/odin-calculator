@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll('button');
+const numbers = document.querySelectorAll('.number-button');
 const screen = document.querySelector('.screen');
 let displayValue;
 
