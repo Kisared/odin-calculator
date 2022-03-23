@@ -24,3 +24,7 @@ body {
     width: 275px;
     background-color: rgb(7, 7, 53);
 }
+
+.buttons-section {
+    display: grid;
+}
