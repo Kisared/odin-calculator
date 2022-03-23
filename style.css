@@ -11,3 +11,7 @@ body {
     width: 300px;
     background-color: gray;
 }
+
+.screen-section {
+    height: 100px;
+}
