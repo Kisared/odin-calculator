@@ -43,7 +43,7 @@ operators.forEach(operator => operator.addEventListener("click", e => {
     if (displayValue === undefined) {
         alert('You cannot use an operator without putting a number first');
     } else {
-        let firstNumber = displayValue;
+        firstNumber = displayValue;
         screen.textContent += e.target.textContent;
         displayValue = screen.textContent;
     }
