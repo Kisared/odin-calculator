@@ -1,3 +1,5 @@
+const buttons = document.querySelectorAll('button');
+
 function add(firstNumber, secondNumber) {
     return firstNumber + secondNumber;
 }
