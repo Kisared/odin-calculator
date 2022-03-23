@@ -31,3 +31,8 @@ function operate(firstNumber, operator, secondNumber) {
         return 'ERROR';
     }
 }
+
+numbers.forEach(number => number.addEventListener("click", e => {
+    screen.textContent += e.target.textContent;
+    displayValue = screen.textContent;
+}))
