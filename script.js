@@ -45,5 +45,5 @@ operators.forEach(button => button.addEventListener("click", e => {
     firstNumber = displayValue;    
         screen.textContent += e.target.textContent;
         displayValue = screen.textContent;
-    }
+    operator = e.target.textContent;
 }))
