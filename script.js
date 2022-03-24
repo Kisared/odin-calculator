@@ -5,6 +5,7 @@ const equalsButton = document.querySelector('.equals-button');
 let displayValue;
 let firstNumber;
 let operator;
+let secondNumber;
 
 function add(firstNumber, secondNumber) {
     return firstNumber + secondNumber;
