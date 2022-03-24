@@ -43,7 +43,14 @@ numbers.forEach(number => number.addEventListener("click", e => {
 
 operators.forEach(button => button.addEventListener("click", e => {
     firstNumber = displayValue;    
-        screen.textContent += e.target.textContent;
-        displayValue = screen.textContent;
+    screen.textContent += e.target.textContent;
+    displayValue = screen.textContent;
     operator = e.target.textContent;
 }))
+
+equalsButton.addEventListener("click", e => {
+    let displayNumbers = displayValue.split(/[*+\/-]+|[A-Za-z]+/);
+    let secondNumber = displayNumbers[1];
+    result = operate(firstNumber, operator, secondNumber);
+    screen.textContent = result;
+})
