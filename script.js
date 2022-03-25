@@ -57,6 +57,12 @@ numbers.forEach(number => number.addEventListener("click", e => {
 }))
 
 operators.forEach(button => button.addEventListener("click", e => {
+    if (secondNumber !== undefined && result === undefined) {
+        result = operate(firstNumber, operator, secondNumber);
+        displayResult(result);
+        secondNumber = undefined;
+        result = undefined;
+    }
     firstNumber = displayValue;    
     display(e);
     operator = e.target.textContent;
