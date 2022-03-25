@@ -44,6 +44,10 @@ function display(event) {
 }
 
 function displayResult(result) {
+    result = Number(result);
+    if (result % 1 != 0) {
+        result = result.toFixed(2)
+    }
     screen.textContent = result;
     displayValue = screen.textContent;
 }
