@@ -6,6 +6,7 @@ let displayValue;
 let firstNumber;
 let operator;
 let secondNumber;
+let result;
 
 function add(firstNumber, secondNumber) {
     return firstNumber + secondNumber;
