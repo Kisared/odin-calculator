@@ -76,6 +76,10 @@ operators.forEach(button => button.addEventListener("click", e => {
 }))
 
 equalsButton.addEventListener("click", () => {
+    if (!firstNumber || !operator || !secondNumber) {
+        return;
+    } else {
     result = operate(firstNumber, operator, secondNumber);
     displayResult(result);
+    }
 })
