@@ -2,6 +2,7 @@ const numbers = document.querySelectorAll('.number-button');
 const screen = document.querySelector('.screen');
 const operators = document.querySelectorAll('.operator-button');
 const equalsButton = document.querySelector('.equals-button');
+const clearButton = document.querySelector('.clear-button');
 let displayValue;
 let firstNumber;
 let operator;
