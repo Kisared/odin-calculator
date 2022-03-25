@@ -71,7 +71,7 @@ operators.forEach(button => button.addEventListener("click", e => {
     operator = e.target.textContent;
 }))
 
-equalsButton.addEventListener("click", e => {
+equalsButton.addEventListener("click", () => {
     result = operate(firstNumber, operator, secondNumber);
     displayResult(result);
 })
