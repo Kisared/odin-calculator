@@ -50,6 +50,8 @@ function displayResult(result) {
     }
     screen.textContent = result;
     displayValue = screen.textContent;
+    secondNumber = undefined;
+    result = undefined;
 }
 
 numbers.forEach(number => number.addEventListener("click", e => {
@@ -67,8 +69,6 @@ operators.forEach(button => button.addEventListener("click", e => {
     if (secondNumber !== undefined && result === undefined) {
         result = operate(firstNumber, operator, secondNumber);
         displayResult(result);
-        secondNumber = undefined;
-        result = undefined;
     }
     firstNumber = displayValue;    
     display(e);
@@ -79,7 +79,7 @@ equalsButton.addEventListener("click", () => {
     if (!firstNumber || !operator || !secondNumber) {
         return;
     } else {
-    result = operate(firstNumber, operator, secondNumber);
-    displayResult(result);
+        result = operate(firstNumber, operator, secondNumber);
+        displayResult(result);
     }
 })
