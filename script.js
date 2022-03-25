@@ -46,9 +46,10 @@ function display(event) {
 function displayResult(result) {
     screen.textContent = result;
     displayValue = screen.textContent;
+}
+
 numbers.forEach(number => number.addEventListener("click", e => {
-    screen.textContent += e.target.textContent;
-    displayValue = screen.textContent;
+    display(e); 
     if (firstNumber !== undefined) {
         let displayNumbers = displayValue.split(/[*+\/-]+|[A-Za-z]+/);
         secondNumber = displayNumbers[1];
@@ -57,12 +58,11 @@ numbers.forEach(number => number.addEventListener("click", e => {
 
 operators.forEach(button => button.addEventListener("click", e => {
     firstNumber = displayValue;    
-    screen.textContent += e.target.textContent;
-    displayValue = screen.textContent;
+    display(e);
     operator = e.target.textContent;
 }))
 
 equalsButton.addEventListener("click", e => {
     result = operate(firstNumber, operator, secondNumber);
-    screen.textContent = result;
+    displayResult(result);
 })
