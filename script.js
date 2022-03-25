@@ -49,8 +49,11 @@ function displayResult(result) {
 }
 
 numbers.forEach(number => number.addEventListener("click", e => {
-    display(e); 
+    // Displays the pressed number on the screen. 
+    display(e);
     if (firstNumber !== undefined) {
+        // Splits the numbers that are separated by an operator and assign them
+        // to an array.
         let displayNumbers = displayValue.split(/[*+\/-]+|[A-Za-z]+/);
         secondNumber = displayNumbers[1];
     }
