@@ -38,6 +38,14 @@ function operate(firstNumber, operator, secondNumber) {
     }
 }
 
+function display(event) {
+    screen.textContent += event.target.textContent;
+    displayValue = screen.textContent;
+}
+
+function displayResult(result) {
+    screen.textContent = result;
+    displayValue = screen.textContent;
 numbers.forEach(number => number.addEventListener("click", e => {
     screen.textContent += e.target.textContent;
     displayValue = screen.textContent;
