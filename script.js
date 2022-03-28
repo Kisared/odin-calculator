@@ -44,12 +44,12 @@ function display(event) {
     displayValue = screen.textContent;
 }
 
-function displayResult(result) {
-    result = Number(result);
-    if (result % 1 != 0) {
-        result = result.toFixed(2)
+function displayResult(r) {
+    r = Number(r);
+    if (r % 1 != 0) {
+        r = r.toFixed(2)
     }
-    screen.textContent = result;
+    screen.textContent = r;
     displayValue = screen.textContent;
     secondNumber = undefined;
     result = undefined;
@@ -83,4 +83,12 @@ equalsButton.addEventListener("click", () => {
         result = operate(firstNumber, operator, secondNumber);
         displayResult(result);
     }
+})
+
+clearButton.addEventListener('click', () => {
+    screen.textContent = "";
+    displayValue = undefined;
+    firstNumber = undefined;
+    secondNumber = undefined;
+    operator = undefined;
 })
