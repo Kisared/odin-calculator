@@ -1,4 +1,8 @@
 body {
+button {
+    font-size: 20px;
+}
+
 html {
     display: flex;
     align-items: center;
