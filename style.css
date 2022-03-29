@@ -1,4 +1,11 @@
 body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 768px;
+    width: 1024px;
+}
+
 button {
     font-size: 20px;
 }
