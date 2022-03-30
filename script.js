@@ -54,6 +54,7 @@ function displayResult(r) {
     firstNumber = displayValue;
     secondNumber = undefined;
     result = undefined;
+    operator = undefined;
 }
 
 numbers.forEach(number => number.addEventListener("click", e => {
