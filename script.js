@@ -67,10 +67,15 @@ numbers.forEach(number => number.addEventListener("click", e => {
         display(e);
     } else display(e);
     if (firstNumber !== undefined && operator !== undefined) {
+        
         // Splits the numbers that are separated by an operator and assign them
         // to an array.
-        let displayNumbers = displayValue.split(/[*+\/-]+|[A-Za-z]+/);
-        secondNumber = displayNumbers[1];
+        let displayNumbers = displayValue.split(/[*+\/-]+|[A-Za-z]+/)
+        
+        // Filters when the split method grabs an empty string (due to the 
+        // existence of negative numbers in displayValue).
+        displayNumbers = displayNumbers.filter((number) => number !== "");
+        secondNumber = Number(displayNumbers[1]);
     }
 }))
 
