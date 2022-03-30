@@ -51,6 +51,7 @@ function displayResult(r) {
     }
     screen.textContent = r;
     displayValue = screen.textContent;
+    firstNumber = displayValue;
     secondNumber = undefined;
     result = undefined;
 }
