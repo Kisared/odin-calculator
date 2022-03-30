@@ -97,7 +97,7 @@ operators.forEach(button => button.addEventListener("click", e => {
 }))
 
 equalsButton.addEventListener("click", () => {
-    if (!firstNumber || !operator || !secondNumber) {
+    if (firstNumber === undefined || operator === undefined || secondNumber === undefined) {
         return;
     } else {
         result = operate(firstNumber, operator, secondNumber);
