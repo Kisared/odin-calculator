@@ -54,13 +54,18 @@ function displayResult(r) {
     firstNumber = displayValue;
     secondNumber = undefined;
     result = undefined;
-    operator = undefined;
 }
 
 numbers.forEach(number => number.addEventListener("click", e => {
     // Displays the pressed number on the screen. 
     display(e);
-    if (firstNumber !== undefined) {
+    if (firstNumber !== undefined && operator === undefined) {
+        screen.textContent = "";
+        displayValue = undefined;
+        firstNumber = undefined;
+        display(e);
+    } else display(e);
+    if (firstNumber !== undefined && operator !== undefined) {
         // Splits the numbers that are separated by an operator and assign them
         // to an array.
         let displayNumbers = displayValue.split(/[*+\/-]+|[A-Za-z]+/);
