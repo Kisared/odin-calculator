@@ -84,9 +84,16 @@ operators.forEach(button => button.addEventListener("click", e => {
         result = operate(firstNumber, operator, secondNumber);
         displayResult(result);
     }
-    firstNumber = displayValue;    
-    display(e);
-    operator = e.target.textContent;
+    if (displayValue === undefined && e.target.textContent === "-") {
+        display(e);
+    } else if (operator !== undefined || displayValue === "-") {
+        return;
+    } else if (displayValue !== undefined){
+        firstNumber = Number(displayValue);    
+        display(e);
+        operator = e.target.textContent;
+    } else return;
+    
 }))
 
 equalsButton.addEventListener("click", () => {
